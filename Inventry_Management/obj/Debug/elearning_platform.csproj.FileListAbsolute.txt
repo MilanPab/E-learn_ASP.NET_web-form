@@ -1,0 +1,162 @@
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\Inventry_Management.dll.config
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\Inventry_Management.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\Inventry_Management.pdb
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\csc.exe
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\csc.exe.config
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\csc.rsp
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\csi.exe
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\csi.exe.config
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\csi.rsp
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.AppContext.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Console.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.IO.Compression.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Net.Http.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Net.Sockets.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.ValueTuple.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Xml.XPath.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\vbc.exe
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\vbc.exe.config
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\vbc.rsp
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\VBCSCompiler.exe
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\BouncyCastle.Crypto.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\Google.Protobuf.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\K4os.Compression.LZ4.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\K4os.Hash.xxHash.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\MySql.Data.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\System.Buffers.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\System.Memory.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\System.Numerics.Vectors.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\ZstdNet.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\BouncyCastle.Crypto.xml
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\Google.Protobuf.pdb
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\Google.Protobuf.xml
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\K4os.Compression.LZ4.xml
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\K4os.Compression.LZ4.Streams.xml
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\K4os.Hash.xxHash.xml
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\MySql.Data.xml
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\System.Buffers.xml
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\System.Memory.xml
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\System.Numerics.Vectors.xml
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\obj\Debug\elearning_platform.csproj.AssemblyReference.cache
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\obj\Debug\elearning_platform.csproj.CoreCompileInputs.cache
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\obj\Debug\elearning_platform.csproj.CopyComplete
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\obj\Debug\Inventry_Management.dll
+C:\Users\nisch\source\repos\elearning_Platform\Inventry_Management\obj\Debug\Inventry_Management.pdb
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\Inventry_Management.dll.config
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\Inventry_Management.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\Inventry_Management.pdb
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\csc.exe
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\csc.exe.config
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\csc.rsp
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\csi.exe
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\csi.exe.config
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\csi.rsp
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\Microsoft.Managed.Core.targets
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.AppContext.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Collections.Immutable.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Console.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Globalization.Calendars.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.IO.Compression.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.IO.Compression.ZipFile.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.IO.FileSystem.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Net.Http.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Net.Sockets.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Reflection.Metadata.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.ValueTuple.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Xml.XmlDocument.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Xml.XPath.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\vbc.exe
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\vbc.exe.config
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\vbc.rsp
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\VBCSCompiler.exe
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\roslyn\VBCSCompiler.exe.config
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\BouncyCastle.Crypto.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\Google.Protobuf.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\K4os.Compression.LZ4.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\K4os.Compression.LZ4.Streams.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\K4os.Hash.xxHash.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\MySql.Data.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\System.Buffers.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\System.Memory.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\System.Numerics.Vectors.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\System.Runtime.CompilerServices.Unsafe.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\ZstdNet.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\BouncyCastle.Crypto.xml
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\Google.Protobuf.pdb
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\Google.Protobuf.xml
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\K4os.Compression.LZ4.xml
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\K4os.Compression.LZ4.Streams.xml
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\K4os.Hash.xxHash.xml
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\MySql.Data.xml
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\System.Buffers.xml
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\System.Memory.xml
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\System.Numerics.Vectors.xml
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\System.Runtime.CompilerServices.Unsafe.xml
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\obj\Debug\elearning_platform.csproj.AssemblyReference.cache
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\obj\Debug\elearning_platform.csproj.CoreCompileInputs.cache
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\obj\Debug\elearning_platform.csproj.CopyComplete
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\obj\Debug\Inventry_Management.dll
+F:\Visual .net\elearning-platform-master\elearning-platform-master\Inventry_Management\obj\Debug\Inventry_Management.pdb

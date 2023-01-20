@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2023 at 07:28 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Jan 20, 2023 at 06:14 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,37 +28,69 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `courses` (
-  `id` bigint(20) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `details` varchar(255) NOT NULL,
-  `videoUrl` varchar(255) NOT NULL,
-  `imageUrl` varchar(255) NOT NULL,
-  `isActive` int(11) NOT NULL DEFAULT 0,
-  `createdAt` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `course_id` int(5) NOT NULL,
+  `course_authour` varchar(20) NOT NULL,
+  `course_title` varchar(50) NOT NULL,
+  `course_content` text NOT NULL,
+  `Image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`id`, `name`, `details`, `videoUrl`, `imageUrl`, `isActive`, `createdAt`) VALUES
-(2, 'DBMS', 'This is dbms', 'https://www.youtube.com/results?search_query=asp.net', 'images/Courses/c83dd16d-1dd6-424e-b9fc-a6caaa7a03f4.png', 0, '2023-01-12 23:00:01'),
-(3, 'Python Full Course', 'It is Python Course', 'https://www.youtube.com/watch?v=T936yTchDck', 'images/Courses/31b7be31-0345-44f6-bc07-be394ed17a33.png', 1, '2023-01-13 10:58:13'),
-(4, 'Java', 'This is Java', 'https://www.youtube.com/watch?v=T936yTchDck', 'images/Courses/f66f3f90-7af6-4f1b-a64f-2ce9813a63f5.png', 1, '2023-01-14 23:43:43');
+INSERT INTO `courses` (`course_id`, `course_authour`, `course_title`, `course_content`, `Image`) VALUES
+(1, 'Pablo', 'Learn Basic of Web Development', 'Web development involves developing a website for the Internet World Wide Web or an intranet a private network. Web development can range from a simple single static page of plain text to complex web applications, electronic businesses, and social network services. ', 'https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `student`
+-- Table structure for table `news`
 --
 
-CREATE TABLE `student` (
-  `st_id` int(11) NOT NULL,
-  `st_name` varchar(255) NOT NULL,
-  `st_email` varchar(255) NOT NULL,
-  `st_mobile` varchar(255) NOT NULL,
-  `st_pass` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL,
+  `news_title` varchar(255) NOT NULL,
+  `news_des` varchar(255) NOT NULL,
+  `news_img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `studentcourses`
+--
+
+CREATE TABLE `studentcourses` (
+  `id` int(11) NOT NULL,
+  `studentID` int(11) NOT NULL,
+  `courseID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `students`
+--
+
+CREATE TABLE `students` (
+  `st_id` int(5) NOT NULL,
+  `st_name` varchar(50) NOT NULL,
+  `st_email` varchar(50) NOT NULL,
+  `st_password` varchar(50) NOT NULL,
+  `st_desc` text NOT NULL,
+  `st_contact` varchar(15) NOT NULL,
+  `st_linkedin` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`st_id`, `st_name`, `st_email`, `st_password`, `st_desc`, `st_contact`, `st_linkedin`) VALUES
+(1, 'milan', 'milan@gmail.com', 'milan', 'I am a Student.', '464336666', 'ewwfeasf'),
+(2, 'admin', 'admin@gmail.com', 'admin', '', '43636', '3434'),
+(3, 'abcd', 'abc@gmail.com', 'abcde', '', '009912872', '');
 
 --
 -- Indexes for dumped tables
@@ -68,12 +100,26 @@ CREATE TABLE `student` (
 -- Indexes for table `courses`
 --
 ALTER TABLE `courses`
+  ADD PRIMARY KEY (`course_id`);
+
+--
+-- Indexes for table `news`
+--
+ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `student`
+-- Indexes for table `studentcourses`
 --
-ALTER TABLE `student`
+ALTER TABLE `studentcourses`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `course` (`courseID`),
+  ADD KEY `student` (`studentID`);
+
+--
+-- Indexes for table `students`
+--
+ALTER TABLE `students`
   ADD PRIMARY KEY (`st_id`);
 
 --
@@ -84,13 +130,36 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `course_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `student`
+-- AUTO_INCREMENT for table `news`
 --
-ALTER TABLE `student`
-  MODIFY `st_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `studentcourses`
+--
+ALTER TABLE `studentcourses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `students`
+--
+ALTER TABLE `students`
+  MODIFY `st_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `studentcourses`
+--
+ALTER TABLE `studentcourses`
+  ADD CONSTRAINT `course` FOREIGN KEY (`courseID`) REFERENCES `courses` (`course_id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `student` FOREIGN KEY (`studentID`) REFERENCES `students` (`st_id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

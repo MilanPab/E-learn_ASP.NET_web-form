@@ -84,7 +84,8 @@
                         </div>
                         <ul class="home5_shop_reg_widget float-right mb0 mt15">
                             <li class="list-inline-item">
-                            <li class="list-inline-item"><a href="#" class="btn btn-md" data-toggle="modal" data-target="#exampleModalCenter"><i class="flaticon-user pr5"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn btn-md" data-toggle="modal" data-target="#exampleModalCenter">
+                                <asp:Image ID="Image1" src="images/logo2.png" runat="server" style="width:30px"/> </i></a></li>
                         </ul>
 
 

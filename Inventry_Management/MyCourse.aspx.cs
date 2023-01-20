@@ -13,7 +13,7 @@ namespace Inventry_Management
         String test = null;
         protected void MessageBox(string message)
         {
-            string alertMessage = "Message: ";
+            
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             sb.Append("<script type = 'text/javascript'>");
             sb.Append("window.onload=function(){");

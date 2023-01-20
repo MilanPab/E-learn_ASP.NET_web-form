@@ -48,30 +48,28 @@ namespace Inventry_Management
             }
             else
             {
-                string query = " select * from student where st_email = '"+InputEmail.Value+"' and st_pass = '"+InputPassword.Value+"' ";
+                string query = " select * from students where st_email = '"+InputEmail.Value+"' and st_password = '"+InputPassword.Value+"' ";
                 con = new MySqlConnection(Connection.GetConnectionString());
                 con.Open();
                 cmd = new MySqlCommand(query, con);
                 cmd.ExecuteNonQuery();
-                //MySqlDataReader sdr = cmd.ExecuteReader();
                 int Result = (int)cmd.ExecuteScalar();
-                if (Result > 0)
+                if (Result == 0)
                 {
-                    String email = InputEmail.Value;
-
-                   // String username = sdr["st_name"].ToString();
-                    Session["email"] = email;
- 
-
-                    
-                    con.Close();
-                    
-                   Response.Redirect("HomePage.aspx");
+                    Response.Redirect("Login.aspx");
 
                 }
                 else
                 {
-                    Response.Redirect("Login.aspx");
+                    
+                    String email = InputEmail.Value;
+                    Session["email"] = email;
+                    con.Close();
+                    HttpCookie cookie = new HttpCookie("active_user");
+                    cookie["email"] = InputEmail.Value;
+                    cookie.Expires = DateTime.Now.AddDays(1);
+                    Response.Cookies.Add(cookie);
+                    Response.Redirect("HomePage.aspx");
                 }
 
                 con.Close();

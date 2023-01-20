@@ -58,28 +58,21 @@
                                                 <label for="image1">
                                                     <span>Browse</span>
                                                 </label>
+                                                
                                             </div>
                                         </div>
+                                        
                                         <div class="col-xl-10">
                                             <div class="row">
                                                 <div class="col-xl-6">
                                                     <div class="my_profile_setting_input form-group">
-                                                        <label for="formGroupExampleInput1">Full Name</label>
-                                                        <input type="text" class="form-control" id="formGroupExampleInput1">
+                                                        <label for="formGroupExampleInput1" >Full Name</label>
+                                                        <input type="text" class="form-control" ID="full_name" runat="server">
                                                     </div>
-                                                    <div class="my_profile_setting_input form-group">
-                                                        <label for="formGroupExampleInput2">Company Name</label>
-                                                        <input type="text" class="form-control" id="formGroupExampleInput2">
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-6">
-                                                    <div class="my_profile_setting_input form-group">
-                                                        <label for="formGroupExampleInput3">Occupation</label>
-                                                        <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="$89">
-                                                    </div>
+                                                    
                                                     <div class="my_profile_setting_input form-group">
                                                         <label for="exampleInputPhone">Phone</label>
-                                                        <input type="email" class="form-control" id="exampleInputPhone" aria-describedby="phoneNumber">
+                                                        <input type="text" class="form-control" ID="phone_number" runat="server" aria-describedby="phoneNumber">
                                                     </div>
                                                 </div>
                                             </div>
@@ -88,7 +81,7 @@
                                             <div class="my_resume_textarea">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlTextarea1">Personal info</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                                                    <textarea class="form-control" ID="user_info" runat="server" rows="7"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -102,17 +95,14 @@
                                         <div class="col-xl-6">
                                             <div class="password_change_form">
                                                 <form>
-                                                    <div class="form-group">
-                                                        <label for="exampleInputPassword1">Old Password</label>
-                                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*******">
-                                                    </div>
+                                                    
                                                     <div class="form-group">
                                                         <label for="exampleInputPassword2">New Password</label>
-                                                        <input type="password" class="form-control" id="exampleInputPassword2">
+                                                        <input type="password" class="form-control" ID="password" runat="server">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleInputPassword3">Confirm Password</label>
-                                                        <input type="password" class="form-control mb0" id="exampleInputPassword3">
+                                                        <input type="password" class="form-control mb0" ID="con_password" runat="server">
                                                     </div>
                                                 </form>
                                             </div>
@@ -125,26 +115,15 @@
                                     </div>
                                     <div class="row my_setting_content_details">
                                         <div class="col-xl-6">
-                                            <div class="my_profile_setting_input2">
-                                                <label for="validationServerUsername">Facebook</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
-                                                </div>
-                                            </div>
+                                          
                                         </div>
-                                        <div class="col-xl-6">
-                                            <div class="my_profile_setting_input2">
-                                                <label for="validationServerUsername2">Twitter</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" id="validationServerUsername2" aria-describedby="inputGroupPrepend4" required>
-                                                </div>
-                                            </div>
+                                        
                                         </div>
                                         <div class="col-xl-6">
                                             <div class="my_profile_setting_input2">
                                                 <label for="validationServerUsername3">Linkedin</label>
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" id="validationServerUsername3" aria-describedby="inputGroupPrepend4" required>
+                                                    <input type="text" class="form-control" ID="linkedin" runat="server" aria-describedby="inputGroupPrepend4" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -152,12 +131,14 @@
                                             <div class="my_profile_setting_input2">
                                                 <label for="validationServerUsername4">Google</label>
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" id="validationServerUsername4" aria-describedby="inputGroupPrepend4" required>
+                                                    <input type="text" class="form-control" ID="google" runat="server" aria-describedby="inputGroupPrepend4" >
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
-                                            <button type="submit" class="my_setting_savechange_btn btn btn-thm">Save <span class="flaticon-right-arrow-1 ml15"></span></button>
+                                            <asp:Button ID="Button1" runat="server" Text="Save" class="my_setting_savechange_btn btn btn-thm" OnClick="Button1_Click"/>
+
+                                            
                                         </div>
                                     </div>
                                 </div>

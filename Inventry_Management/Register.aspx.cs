@@ -38,7 +38,7 @@ namespace Inventry_Management
             }
             else
             {
-                string query = " INSERT INTO `student`(`st_name`,`st_email`,`st_mobile`,`st_pass`) values('" + username.Value.ToString() + "','" + InputEmail.Value.ToString() + "','" + contact.Value.ToString() + "','" + InputPassword.Value.ToString() + "') ";
+                string query = " INSERT INTO `students`(`st_name`,`st_email`,`st_password`,`st_contact`) values('" + username.Value.ToString() + "','" + InputEmail.Value.ToString() + "','" + InputPassword.Value.ToString() + "','" + contact.Value.ToString() + "') ";
                 con = new MySqlConnection(Connection.GetConnectionString());
                 con.Open();
                 cmd = new MySqlCommand(query, con);

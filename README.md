@@ -1,10 +1,13 @@
 # elearning-platform
-###Clz Project ###
+<h5>Clz Project </h1>
 This is Our College Project. Elearning Platform is Online Learning Platform Where User Can Learn & Practice Their Skills
+</br>
 
-##Project is Contibuted by ##
--Milan Poudel
--Nishchal Basyal
+<h5>Project is Contibuted by </h5>
+<li>Milan Poudel</li>
+<li>Nishchal Basyal</li>
+
+</br>
 
 Asp.Net Clz Project
 

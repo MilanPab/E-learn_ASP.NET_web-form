@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Inventry_Management
 {
@@ -15,84 +16,73 @@ namespace Inventry_Management
     {
         MySqlConnection con;
         MySqlCommand cmd;
-        MySqlDataAdapter mySqlDataAdapter;
-        DataTable dataTable;
-        
+        String email = "abc@gmail.com";
+        string query = null;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            fetch();
+            Session["email"] = "abc@gmail.com";
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
-        
+
 
         protected void fetch()
         {
-            con = new MySqlConnection(Connection.GetConnectionString());
-            con.Open();
-            HttpCookie cokobj = Request.Cookies["active_user"];
-            string emaill = cokobj["email"];
-            String email = Response.Cookies["email"].ToString();
-            String query = "select * from students where `st_email` = '"+emaill.ToString()+"' ";
-            cmd = new MySqlCommand(query, con);
-            DataTable dt = new DataTable();
-            //MySqlDataAdapter ada = new MySqlDataAdapter(cmd);
-            //ada.Fill(dt);
 
-            MySqlDataReader dr = cmd.ExecuteReader();
-
-            if (dr.HasRows)
+            if (email != null)
             {
-                while (dr.Read())
+                con = new MySqlConnection(Connection.GetConnectionString());
+                con.Open();
+
+                String query = "select * from students where `st_email` = '" + Session["email"].ToString() + "' ";
+                cmd = new MySqlCommand(query, con);
+                DataTable dt = new DataTable();
+
+
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+
+                if (dr.HasRows)
                 {
-                    full_name.Value = dr.GetString("st_name");
-                    phone_number.Value = dr.GetString("st_contact");
-                    user_info.Value = dr.GetString("st_desc");
-                    google.Value = dr.GetString("st_email");
-                    linkedin.Value = dr.GetString("st_linkedin");
+                    while (dr.Read())
+                    {
+                        full_name.Value = dr.GetString("st_name");
+                        phone_number.Value = dr.GetString("st_contact");
+                        user_info.Value = dr.GetString("st_desc");
+                        google.Value = dr.GetString("st_email");
+                        linkedin.Value = dr.GetString("st_linkedin");
+                    }
                 }
+                else
+                {
+                    Response.Redirect("Login.aspx");
+                }
+
+                con.Close();
+
             }
             else
             {
-                Response.Redirect("HomePage.aspx");
+                Response.Redirect("Login.aspx");
             }
-
-            //if (dt.Rows.Count > 0)
-            //{
-            //    full_name.Value = dt.Rows[0].ToString();
-                
-
-            //    //phone_number.Value = dt.Rows[2].ToString();
-            //    //password.Value = dt.Rows[4].ToString();
-            //    //user_info.Value = dt.Rows[3].ToString();
-            //    //google.Value = dt.Rows[5].ToString();
-            //    //linkedin.Value = dt.Rows[6].ToString();
-
-            //}
-            //else
-            //{
-            //    Response.Redirect("HomePage.aspx");  
-            //}
-            
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             Save();
-            fetch();
         }
 
 
         protected void Save()
         {
-            if(full_name.Value == "" || phone_number.Value == "" || google.Value == "" ) 
+            if (full_name.Value == "" || phone_number.Value == "" || google.Value == "")
             {
-                
+
                 Response.Write("<script>alert('plesase fill required field !')</script>");
 
             }
@@ -102,19 +92,60 @@ namespace Inventry_Management
                 {
                     con = new MySqlConnection(Connection.GetConnectionString());
                     con.Open();
-                    HttpCookie cokobj = Request.Cookies["active_user"];
-                    string emaill = cokobj["email"];
-                    
-                    string query = " update `students` set st_name = '" + full_name.Value + "', st_email = '" + google.Value + "', st_password= '" + password.Value + "',st_desc= '" + user_info.Value + "',st_contact='" + phone_number.Value + "',st_linkedin='" + linkedin.Value + "'  where st_email == '" + emaill.ToString() + "'      ";
-                    cmd = new MySqlCommand(query, con);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    Response.Redirect("HomePage.aspx");
-                }catch(Exception ex)
+
+                    if (full_name.Value != "" && phone_number.Value != "" && google.Value != "")
+                    {
+                        string query = " update `students` set st_name = '" + full_name.Value + "', st_email = '" + google.Value + "', st_password= '" + password.Value + "',st_desc= '" + user_info.Value + "',st_contact='" + phone_number.Value + "',st_linkedin='" + linkedin.Value + "'  where st_email == '" + Session["email"].ToString() + "'      ";
+
+                    }
+                    else if (full_name.Value != "" && phone_number.Value != "")
+                    {
+                        string query = " update `students` set st_name = '" + full_name.Value + "', st_email = '" + google.Value + "', st_password= '" + password.Value + "',st_desc= '" + user_info.Value + "',st_contact='" + phone_number.Value + "',st_linkedin='" + linkedin.Value + "'  where st_email == '" + Session["email"].ToString() + "'      ";
+
+
+                    }
+                    else if (phone_number.Value != "" && google.Value != "")
+                    {
+                        string query = " update `students` set st_name = '" + full_name.Value + "', st_email = '" + google.Value + "', st_password= '" + password.Value + "',st_desc= '" + user_info.Value + "',st_contact='" + phone_number.Value + "',st_linkedin='" + linkedin.Value + "'  where st_email == '" + Session["email"].ToString() + "'      ";
+
+                    }
+                    else if (!string.IsNullOrEmpty(full_name.Value))
+                    {
+                        string query = " update `students` set st_name = '" + full_name.Value + "', st_email = '" + google.Value + "', st_password= '" + password.Value + "',st_desc= '" + user_info.Value + "',st_contact='" + phone_number.Value + "',st_linkedin='" + linkedin.Value + "'  where st_email == '" + Session["email"].ToString() + "'      ";
+
+                    }
+                    else if (!string.IsNullOrEmpty(phone_number.Value))
+                    {
+                        string query = " update `students` set st_name = '" + full_name.Value + "', st_email = '" + google.Value + "', st_password= '" + password.Value + "',st_desc= '" + user_info.Value + "',st_contact='" + phone_number.Value + "',st_linkedin='" + linkedin.Value + "'  where st_email == '" + Session["email"].ToString() + "'      ";
+
+
+                    }
+                    else
+                    {
+                        string query = " update `students` set st_name = '" + full_name.Value + "', st_email = '" + google.Value + "', st_password= '" + password.Value + "',st_desc= '" + user_info.Value + "',st_contact='" + phone_number.Value + "',st_linkedin='" + linkedin.Value + "'  where st_email == '" + Session["email"].ToString() + "'      ";
+
+                    }
+                    if (query != null)
+                    {
+
+                        cmd = new MySqlCommand(query, con);
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        fetch();
+                    }
+                }
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
             }
+        }
+
+        protected void Button2_Click1(object sender, EventArgs e)
+        {
+            Session.Remove("email");
+            Session.RemoveAll();
+            Response.Redirect("Login.aspx");
         }
     }
 }

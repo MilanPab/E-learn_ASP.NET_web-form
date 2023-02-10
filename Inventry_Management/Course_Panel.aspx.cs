@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,15 +11,32 @@ namespace Inventry_Management
 {
     public partial class Course_Panel : System.Web.UI.Page
     {
+        MySqlConnection con;
+        MySqlCommand cmd;
+        MySqlDataAdapter mySqlDataAdapter;
+        DataTable dataTable;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            getCourses();
 
         }
 
-        protected void div1_clicked(object sender, EventArgs e)
+        private void getCourses()
         {
-            Response.Redirect("NewsDetail.aspx");
+            string query = "SELECT * FROM `courses`";
+            con = new MySqlConnection(Connection.GetConnectionString());
+            cmd = new MySqlCommand(query, con);
+            mySqlDataAdapter = new MySqlDataAdapter(cmd);
+            dataTable = new DataTable();
+            mySqlDataAdapter.Fill(dataTable);
+            RepeaterCourse.DataSource = dataTable;
+            RepeaterCourse.DataBind();
         }
+
+
+      
 
     }
 }

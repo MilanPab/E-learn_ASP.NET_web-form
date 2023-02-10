@@ -8,6 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MySql.Data.MySqlClient;
 
 namespace Inventry_Management
 {
@@ -18,8 +19,16 @@ namespace Inventry_Management
     {
         MySqlConnection con;
         MySqlCommand cmd;
-        MySqlDataAdapter mySqlDataAdapter;
-        DataTable dataTable;
+        int Result = 0;
+        string studentID = null;
+        string email = null;
+
+
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+ 
+        }
 
 
         protected void MessageBox(string message)
@@ -34,47 +43,75 @@ namespace Inventry_Management
             sb.Append("</script>");
             ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", sb.ToString());
         }
-        protected void Page_Load(object sender, EventArgs e)
-        {
- 
-        }
+
+
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if ( InputEmail.Value == "" || InputPassword.Value == "")
+            if (InputEmail.Value == "" || InputPassword.Value == "")
             {
-                InputEmail.Value = "error";
-
+                MessageBox("Enter email or password");
             }
             else
             {
-                string query = " select * from students where st_email = '"+InputEmail.Value+"' and st_password = '"+InputPassword.Value+"' ";
+                string query = "SELECT COUNT(*) FROM `students` WHERE st_email = '" + InputEmail.Value + "' AND st_password = '" + InputPassword.Value + "'";
                 con = new MySqlConnection(Connection.GetConnectionString());
                 con.Open();
                 cmd = new MySqlCommand(query, con);
-                cmd.ExecuteNonQuery();
-                int Result = (int)cmd.ExecuteScalar();
+                object result = cmd.ExecuteScalar();
+
+                if (result != DBNull.Value)
+                {
+                    Result = Convert.ToInt32(result);
+                }
+
                 if (Result == 0)
                 {
+                    MessageBox("Login Failed");
                     Response.Redirect("Login.aspx");
-
                 }
                 else
                 {
-                    
-                    String email = InputEmail.Value;
+                    MessageBox("SuccessFully Login");
+                    email = InputEmail.Value;
                     Session["email"] = email;
-                    con.Close();
-                    HttpCookie cookie = new HttpCookie("active_user");
-                    cookie["email"] = InputEmail.Value;
-                    cookie.Expires = DateTime.Now.AddDays(1);
-                    Response.Cookies.Add(cookie);
+                  
+                    getStudetID();
                     Response.Redirect("HomePage.aspx");
+
+                    
                 }
-
                 con.Close();
-
             }
         }
+
+
+        private void getStudetID()
+        {
+            string query = "SELECT st_id from students where st_email=@email";
+            MessageBox(query);
+            con = new MySqlConnection(Connection.GetConnectionString());
+            con.Open();
+
+            cmd = new MySqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@email", InputEmail.Value);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                studentID = reader["st_id"].ToString();
+ 
+             }
+
+            if(studentID!= null)
+            {
+                Session["studentID"] = studentID;   
+            }
+            con.Close();
+
+
+        }
+
     }
 }

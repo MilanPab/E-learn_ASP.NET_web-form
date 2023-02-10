@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 20, 2023 at 06:14 AM
+-- Generation Time: Feb 03, 2023 at 12:39 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -28,19 +28,36 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `courses` (
-  `course_id` int(5) NOT NULL,
-  `course_authour` varchar(20) NOT NULL,
-  `course_title` varchar(50) NOT NULL,
-  `course_content` text NOT NULL,
-  `Image` varchar(255) NOT NULL
+  `id` bigint(20) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `details` varchar(255) NOT NULL,
+  `videoUrl` varchar(255) NOT NULL,
+  `imageUrl` varchar(255) NOT NULL,
+  `isActive` int(11) NOT NULL DEFAULT 0,
+  `createdAt` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`course_id`, `course_authour`, `course_title`, `course_content`, `Image`) VALUES
-(1, 'Pablo', 'Learn Basic of Web Development', 'Web development involves developing a website for the Internet World Wide Web or an intranet a private network. Web development can range from a simple single static page of plain text to complex web applications, electronic businesses, and social network services. ', 'https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+INSERT INTO `courses` (`id`, `name`, `details`, `videoUrl`, `imageUrl`, `isActive`, `createdAt`) VALUES
+(2, 'DBMS', 'This is dbms', 'https://www.youtube.com/results?search_query=asp.net', 'images/Courses/c83dd16d-1dd6-424e-b9fc-a6caaa7a03f4.png', 0, '2023-01-12 23:00:01'),
+(3, 'Python Full Course', 'It is Python Course', 'https://www.youtube.com/watch?v=T936yTchDck', 'images/Courses/31b7be31-0345-44f6-bc07-be394ed17a33.png', 1, '2023-01-13 10:58:13'),
+(4, 'Java', 'This is Java', 'https://www.youtube.com/watch?v=T936yTchDck', 'images/Courses/f66f3f90-7af6-4f1b-a64f-2ce9813a63f5.png', 1, '2023-01-14 23:43:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enrolled_course`
+--
+
+CREATE TABLE `enrolled_course` (
+  `course_id` int(11) NOT NULL,
+  `course_title` varchar(255) NOT NULL,
+  `course_desc` text NOT NULL,
+  `author` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -55,17 +72,15 @@ CREATE TABLE `news` (
   `news_img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `studentcourses`
+-- Dumping data for table `news`
 --
 
-CREATE TABLE `studentcourses` (
-  `id` int(11) NOT NULL,
-  `studentID` int(11) NOT NULL,
-  `courseID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `news` (`id`, `news_title`, `news_des`, `news_img`) VALUES
+(1, 'Trump making ideal sloution for pollution', 'The Department of Education, Sport and Culture (DESC) has launched a consultation on a new uniform policy for the island\'s secondary schools.\r\n\r\nCurrently each sets their own rules under guidance from the department.\r\n\r\nDESC Minister Julie Edge said the r', ''),
+(2, 'Trump making ideal sloution for pollution', 'The Department of Education, Sport and Culture (DESC) has launched a consultation on a new uniform policy for the island secondary schools.Currently each sets their own rules under guidance from the department.DESC Minister Julie Edge said the review was ', ''),
+(3, 'Sports hubs plan to save regional pools backed by Tynwal', 'An investigation into whether creating new sports hubs would ensure the future of the Isle of Man\'s regional swimming pools has been backed by Tynwald.The Department of Education, Sport and Culture (DESC) had proposed controlling the struggling pools cent', ''),
+(4, 'Sports hubs plan to save regional pools backed by Tynwal', 'An investigation into whether creating new sports hubs would ensure the future of the Isle of Man regional swimming pools has been backed by Tynwald.The Department of Education, Sport and Culture  had proposed controlling the struggling pools centrally.Bu', '');
 
 -- --------------------------------------------------------
 
@@ -100,6 +115,12 @@ INSERT INTO `students` (`st_id`, `st_name`, `st_email`, `st_password`, `st_desc`
 -- Indexes for table `courses`
 --
 ALTER TABLE `courses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `enrolled_course`
+--
+ALTER TABLE `enrolled_course`
   ADD PRIMARY KEY (`course_id`);
 
 --
@@ -107,14 +128,6 @@ ALTER TABLE `courses`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `studentcourses`
---
-ALTER TABLE `studentcourses`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `course` (`courseID`),
-  ADD KEY `student` (`studentID`);
 
 --
 -- Indexes for table `students`
@@ -130,36 +143,25 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `course_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `enrolled_course`
+--
+ALTER TABLE `enrolled_course`
+  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `studentcourses`
---
-ALTER TABLE `studentcourses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
   MODIFY `st_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `studentcourses`
---
-ALTER TABLE `studentcourses`
-  ADD CONSTRAINT `course` FOREIGN KEY (`courseID`) REFERENCES `courses` (`course_id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `student` FOREIGN KEY (`studentID`) REFERENCES `students` (`st_id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

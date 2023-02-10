@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Inventry_Management.Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Inventry_Management.Login" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -36,19 +36,8 @@
                                 </div>
                                 
                                 <asp:Button ID="Button1" class="btn btn-log btn-block btn-thm2" runat="server" Text="Login" OnClick="Button1_Click" />
-
-                                <div class="divide">
-                                    <span class="lf_divider">Or</span>
-                                    <hr>
-                                </div>
-                                <div class="row mt40">
-                                    <div class="col-lg">
-                                        <button type="submit" class="btn btn-block color-white bgc-fb mb0"><i class="fa fa-facebook float-left mt5"></i>Facebook</button>
-                                    </div>
-                                    <div class="col-lg">
-                                        <button type="submit" class="btn btn2 btn-block color-white bgc-gogle mb0"><i class="fa fa-google float-left mt5"></i>Google</button>
-                                    </div>
-                                </div>
+ 
+ 
                          </div>
                     </div>
                 </div>

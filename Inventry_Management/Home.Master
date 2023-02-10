@@ -55,9 +55,9 @@
                                 <span class="icon-bar"></span>
                             </button>
                         </div>
-                        <a href="#" class="navbar_brand float-left dn-smd">
+                        <a href="/HomePage.aspx" class="navbar_brand float-left dn-smd">
                             <img class="logo1 img-fluid" src="images/header-logo5.png" alt="header-logo2.png">
-                            <span>E - learn</span>
+                            <span>E - Learn</span>
                         </a>
                         <!-- Responsive Menu Structure-->
                         <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
@@ -85,7 +85,8 @@
                         <ul class="home5_shop_reg_widget float-right mb0 mt15">
                             <li class="list-inline-item">
                             <li class="list-inline-item"><a href="#" class="btn btn-md" data-toggle="modal" data-target="#exampleModalCenter">
-                                <asp:Image ID="Image1" src="images/logo2.png" runat="server" style="width:30px"/> </i></a></li>
+                                <asp:Image ID="Image1" src="images/logo2.png" runat="server" Style="width: 30px" />
+                                </i></a></li>
                         </ul>
 
 
@@ -132,7 +133,7 @@
 
 
 
-
+<%--            Footer Content--%>
             <section class="footer_middle_area p0">
                 <div class="container">
                     <div class="row">
@@ -145,9 +146,9 @@
                         <div class="col-sm-8 col-md-5 col-lg-6 col-xl-6 pb25 pt25 brdr_left_right">
                             <div class="footer_menu_widget">
                                 <ul>
-                                    <li class="list-inline-item"><a href="#">Home</a></li>
-                                    <li class="list-inline-item"><a href="#">Terms & Privacy</a></li>
-                                    <li class="list-inline-item"><a href="#">Purchase</a></li>
+                                    <li class="list-inline-item"><a href="/HomePage.aspx">Home</a></li>
+                                    <li class="list-inline-item"><a href="/MyCourse.aspx">My Courses</a></li>
+                                    <li class="list-inline-item"><a href="/ContactUs.aspx">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>

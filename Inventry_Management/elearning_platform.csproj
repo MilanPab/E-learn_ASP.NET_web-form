@@ -490,6 +490,7 @@
     <Content Include="images\resource\usa.png" />
     <Content Include="images\resource\videoicon.png" />
     <Content Include="images\resource\videooverlay1.png" />
+    <Content Include="images\rku.png" />
     <Content Include="images\search-icon.png" />
     <Content Include="images\service\1.jpg" />
     <Content Include="images\service\2.jpg" />

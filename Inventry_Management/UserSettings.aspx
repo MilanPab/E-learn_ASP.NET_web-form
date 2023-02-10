@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="UserSettings.aspx.cs" Inherits="Inventry_Management.UserSettings" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="UserSettings.aspx.cs" EnableEventValidation="false" Inherits="Inventry_Management.UserSettings" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -18,16 +18,16 @@
                         <div class="dashbord_nav_list">
                             <ul>
                                 
-                                <li><a href="page-my-courses.html"><span class="flaticon-online-learning"></span>My Courses</a></li>
+                                <li><a href="MyCourse.aspx"><span class="flaticon-online-learning"></span>My Courses</a></li>
                                 
-                                <li><a href="page-my-message.html"><span class="flaticon-speech-bubble"></span>Messages</a></li>
-                                
+                                 
                                 
                                 
                             </ul>
                             <h4>Account</h4>
                             <ul>
-                                <li><a href="page-login.html"><span class="flaticon-logout"></span>Logout</a></li>
+                                
+                                <asp:Button ID="Button2" runat="server"  Text="Logout" style=" margin-left:40px;margin-top:20px; padding:5px;background-color:red; color:white; border-radius:7px;cursor:pointer" OnClick="Button2_Click1" />
                             </ul>
                         </div>
                     </div>
